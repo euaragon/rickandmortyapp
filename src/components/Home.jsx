@@ -34,6 +34,7 @@ const Home = () => {
       setUsuario({ username: "", password: "" });
 
       setErrors({ username: "", password: "" });
+      
 
     } else { alert("Debes corregir los errores") }
   };
