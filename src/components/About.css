@@ -75,3 +75,7 @@
   width: 200px;
   display: block;
 }
+
+.masabajo3, .masabajo3 form{margin-top: 50px;}
+
+.danger{color: red; font-weight: bold;}

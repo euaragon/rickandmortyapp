@@ -44,6 +44,7 @@ const Home = () => {
         <h1>THE RICK AND MORTY APP</h1>
 
         <br />
+        <div className="masabajo3">
         <h2>Logueate para entrar</h2>
         {/* <NavLink to="/cards">CARDS</NavLink>
         <NavLink to="/about">ABOUT</NavLink> */}
@@ -68,6 +69,7 @@ const Home = () => {
           <p className="danger">{errors.password}</p>
           <button>Entrar</button>
         </form>
+        </div>
       </div>
     </>
   );
