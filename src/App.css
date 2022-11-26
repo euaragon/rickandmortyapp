@@ -1,38 +1,112 @@
+a{
+  text-decoration: none;
+  margin: 0 10px;
+  color: aliceblue;
+}
+
+a:hover{
+  color: #98c1d9;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #98c1d9;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.buscador {
+  background-color: #40916c;
+  width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    box-shadow: 1px 6px 9px -5px rgba(0,0,0,0.36);
+-webkit-box-shadow: 1px 6px 9px -5px rgba(0,0,0,0.36);
+-moz-box-shadow: 1px 6px 9px -5px rgba(0,0,0,0.36);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo{
+  width: 300px;
+  position: relative;
+  left: 30px;
+
 }
+.logo:hover{
+  bottom: 2px;
+}
+
+.navBar{
+  padding: 20px;
+  position: relative;
+  right: 10px;
+  float: right;
+  top: 30px;
+}
+
+.navBar input{
+  padding: 7px 20px;
+  border-radius: 100px;
+  margin: 10px 5px;
+  border: solid 0px;
+  background: #c7d9e4;
+}
+
+.navBar button{
+  position: relative;
+  border: solid 0px;
+  cursor: pointer;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+			text-align:center;
+			text-decoration: none;
+      color: #FFF;
+		 background: #3d5a80;
+  box-shadow: 0px 5px 0px 0px #293241;
+			padding: 7px 20px;
+			white-space: nowrap;
+			
+			border-radius: 100px;
+			margin: 10px 5px;
+			
+}
+
+.navBar button:hover{
+  top: 2px;
+}
+
+.grid {
+  display: inline-block;
+  justify-content: center;
+  padding-top: 140px;
+  padding-left: 30px;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+h1 {
+  font-size: 14pt;
+  font-weight: bold;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 155px;
+}
+h2 {
+  font-size: 14px;
+  text-align: center;
+}
+
+img {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+}
+hr {margin:10px 0; padding: 0;border: #98c1d9 solid 1px;}
