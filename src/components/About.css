@@ -1,15 +1,8 @@
-.masabajo {
+.masabajo, .masabajo2 {
   display: block;
   text-align: center;
   align-items: center;
-  margin-top: 180px;
-}
-
-.masabajo2 {
-  display: block;
-  text-align: center;
-  align-items: center;
-  margin-top: 180px;
+  margin-top: 40px;
 }
 
 .masabajo h1,

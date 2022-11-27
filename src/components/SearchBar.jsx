@@ -15,7 +15,6 @@ export default function SearchBar(props) {
 
   return (
     <div className="navBar">
-       <NavLink to="/">HOME</NavLink>
         <NavLink to="/cards">CARDS</NavLink>
         <NavLink to="/about">ABOUT</NavLink>
       <input value={char} onChange={handleInputChange} type="text" />

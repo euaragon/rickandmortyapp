@@ -1,12 +1,12 @@
 import React from "react";
 import "./About.css";
-
+import { useNavigate } from "react-router-dom";
 const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
 export const validate = (usuario) => {
   let errors = {};
   if (!regexEmail.test(usuario.username)) errors.username = "Debe ser un correo electrónico";
-  if (!usuario.password) errors.password = "Se requiere una constraseña";
+  if (!usuario.password || (usuario.password.length < 6 && usuario.password.length > 10)) errors.password = "Se requiere una constraseña";
 
   return errors;
 };
@@ -15,7 +15,7 @@ const Home = () => {
   const [usuario, setUsuario] = React.useState({ username: "", password: "" });
 
   const [errors, setErrors] = React.useState({ username: "", password: "" });
-
+  const navigate = useNavigate();
   const handleChange = (event) => {
     setUsuario({ ...usuario, [event.target.name]: event.target.value });
     setErrors(
@@ -31,10 +31,10 @@ const Home = () => {
     const arrErrors = Object.keys(errors);
     if (arrErrors.length === 0) {
       alert("Datos completos");
-      setUsuario({ username: "", password: "" });
+      setUsuario({ username: "eugenio.aragon@gmail.com", password: "123456" });
 
       setErrors({ username: "", password: "" });
-      
+      navigate("/cards");
 
     } else { alert("Debes corregir los errores") }
   };

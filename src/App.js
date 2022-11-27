@@ -1,16 +1,32 @@
-import { useState } from "react";
-
 import "./App.css";
 import Home from "./components/Home.jsx";
 import Cards from "./components/Cards.jsx";
 import Nav from "./components/nav";
 import About from "./components/About.jsx";
 import Detail from "./components/Detail.jsx";
-//import Detail from "./components/Detail";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import { useState, useEffect  } from 'react';
+
+
 
 function App() {
   const [characters, setCharacters] = useState([]);
+  const navigate = useNavigate();
+  const [access, setAccess] = useState(false);
+  const username = "eugenio.aragon@gmail.com";
+  const password = "123456";
+
+
+  const login = (userData) => {
+    if(userData.username.value === username.value && userData.password.value === password.value){
+      setAccess(true);
+      navigate("/cards");
+    }
+  }
+    
+  useEffect(() => {
+    !access && navigate('/');
+ }, [access]);
 
   const onSearch = (character) => {
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
@@ -28,18 +44,30 @@ function App() {
     setCharacters(characters.filter((char) => char.id !== id));
   };
 
+
+
+
   return (
     <div className="App">
-      <Nav onSearch={onSearch} />
+     
       <Routes>
-        <Route exact path="/" element={<Home/>}/>
-        <Route exact path="/about" element={<About/>}/>
-        <Route exact path="/cards" element={
+       
+        <Route exact path="/" element={<Home login={login}/>}/>
+       
+        <Route  path="/about" element={
            <div className="grid">
+             <Nav onSearch={onSearch} />
+             <About/>
+         </div>
+        }/>
+
+        <Route  path="/cards" element={
+           <div className="grid">
+             <Nav onSearch={onSearch} />
            <Cards characters={characters} onClose={onClose} />
          </div>
         }/>
-        <Route exact path="/detail/:detailId" element={<Detail/>}/>
+        <Route  path="/detail/:detailId" element={<Detail/>}/>
       </Routes>
     </div>
   );

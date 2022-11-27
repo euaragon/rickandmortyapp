@@ -1,8 +1,8 @@
 import Card from './Card.jsx';
-
 export default function Cards(props) {
 
   const {characters, onClose} = props;
+
 
 return(
  <div>
