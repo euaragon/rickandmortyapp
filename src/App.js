@@ -17,8 +17,8 @@ function App() {
   const password = "123456";
 
 
-  const login = (userData) => {
-    if(userData.username.value === username.value && userData.password.value === password.value){
+  const login = (usuario) => {
+    if(usuario.username === username && usuario.password === password){
       setAccess(true);
       navigate("/cards");
     }

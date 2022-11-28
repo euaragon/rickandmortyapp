@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
 export const validate = (usuario) => {
@@ -11,7 +11,7 @@ export const validate = (usuario) => {
   return errors;
 };
 
-const Home = () => {
+const Home = (props) => {
   const [usuario, setUsuario] = React.useState({ username: "", password: "" });
 
   const [errors, setErrors] = React.useState({ username: "", password: "" });
@@ -26,17 +26,18 @@ const Home = () => {
     );
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const arrErrors = Object.keys(errors);
-    if (arrErrors.length === 0) {
-      alert("Datos completos");
-      setUsuario({ username: "eugenio.aragon@gmail.com", password: "123456" });
+  const handleSubmit = () => {
+   //props.preventDefault();
+    props.login(usuario)
+    // const arrErrors = Object.keys(errors);
+    // if (arrErrors.length === 0) {
+    //   alert("Datos completos");
+    //   setUsuario({ username: "eugenio.aragon@gmail.com", password: "123456" });
 
-      setErrors({ username: "", password: "" });
-      navigate("/cards");
+    //   setErrors({ username: "", password: "" });
+    //   navigate("/cards");
 
-    } else { alert("Debes corregir los errores") }
+    // } else { alert("Debes corregir los errores") }
   };
 
   return (
@@ -65,10 +66,10 @@ const Home = () => {
             name="password"
             value={usuario.password}
             placeholder="ingresá tu contraseña..."
-            type="text"
+            type="password"
           ></input>
           <p className="danger">{errors.password}</p>
-          <button>Entrar</button>
+          <button type="submit" disabled={!usuario.username || !usuario.password}>Entrar</button>
         </form>
         </div>
       </div>
