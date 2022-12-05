@@ -10,11 +10,11 @@ export function Card(props) {
 
    useEffect(() => {
       props.myFavorites.forEach(fav => {
-         if (fav.detailId === props.id) {
+         if (fav.detailId === props.detailId) {
             setIsFav(true);
          }
       });
-   }, [props.myFavorites, props.id]);
+   }, [props.myFavorites, props.detailId]);
 
    function handleFavorite(){
       if(isFav){
