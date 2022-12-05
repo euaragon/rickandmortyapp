@@ -19,7 +19,7 @@ export function Card(props) {
    function handleFavorite(){
       if(isFav){
          setIsFav(false)
-         props.deleteFav(props.id)
+         props.deleteFav(props.detailId)
       } else {
          setIsFav(true)
          props.addFav(props)
