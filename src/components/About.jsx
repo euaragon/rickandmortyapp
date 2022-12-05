@@ -13,9 +13,9 @@ const About = () => {
          <br/>
         <img src={Man} alt="yo"></img>
 
-        <p>Diseñador Multimedial con 8 años de experiencia, especializado en la creación  <br/>
-de diseños visuales potentes utilizando ilustraciones digitales, imágenes  <br/> y
-tipografía. Comprometido a ayudar a los clientes a dar forma a su identidad <br/> de
+        <p>Diseñador Multimedial con 8 años de experiencia, especializado en la creación 
+de diseños visuales potentes utilizando ilustraciones digitales, imágenes y
+tipografía. Comprometido a ayudar a los clientes a dar forma a su identidad de
 marca mediante el uso de diseños gráficos convincentes. <br/>
 Además, fotógrafo de retratos, productos y eventos.  <br/> <br/>
 <strong>FUTURO FULL STACK DEVELOPER</strong>

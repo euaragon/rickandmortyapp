@@ -4,6 +4,7 @@ import Cards from "./components/Cards.jsx";
 import Nav from "./components/nav";
 import About from "./components/About.jsx";
 import Detail from "./components/Detail.jsx";
+import Favorites from "./components/Favorites";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { useState, useEffect  } from 'react';
 
@@ -58,6 +59,13 @@ function App() {
            <div className="grid">
              <Nav onSearch={onSearch} />
              <About/>
+         </div>
+        }/>
+
+        <Route  path="/favorites" element={
+           <div className="grid">
+             <Nav onSearch={onSearch} />
+             <Favorites/>
          </div>
         }/>
 

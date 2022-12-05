@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import { useNavigate } from "react-router";
+//import { useNavigate } from "react-router";
 const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
 export const validate = (usuario) => {
@@ -15,7 +15,7 @@ const Home = (props) => {
   const [usuario, setUsuario] = React.useState({ username: "", password: "" });
 
   const [errors, setErrors] = React.useState({ username: "", password: "" });
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const handleChange = (event) => {
     setUsuario({ ...usuario, [event.target.name]: event.target.value });
     setErrors(
