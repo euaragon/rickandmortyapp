@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
 import Card from "./Card";
-import { deleteFav } from "./redux/actions"
 
  function Favorites({myFavorites}) {
   return (
