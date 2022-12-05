@@ -48,8 +48,7 @@ const Home = (props) => {
         <br />
         <div className="masabajo3">
         <h2>Logueate para entrar</h2>
-        {/* <NavLink to="/cards">CARDS</NavLink>
-        <NavLink to="/about">ABOUT</NavLink> */}
+        
         <form onSubmit={handleSubmit}>
           <label>USERNAME: </label>
           <input
