@@ -21,7 +21,7 @@ export default function SearchBar(props) {
         
       <input value={char} onChange={handleInputChange} type="text" />
       <button onClick={() => onSearch(char)}>Agregar</button>
-      <button onClick={ ( )=> onSearch(aleat) }>Random</button>
+      <button onClick={()=> onSearch(aleat) }>Random</button>
     </div>
   );
 }
