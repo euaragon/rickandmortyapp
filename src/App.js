@@ -39,10 +39,12 @@ function App() {
           window.alert("No hay personajes con ese ID");
         }
       });
+      navigate('/cards')
   };
 
-  const onClose = (id) => {
-    setCharacters(characters.filter((char) => char.id !== id));
+ function onClose(e) {
+  let newChar =  characters.filter((char) => char.id !== e)
+  setCharacters(newChar);
   };
 
 

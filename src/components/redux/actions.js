@@ -1,4 +1,4 @@
-import { ADD_FAV, DELETE_FAV } from "./types"
+import { ADD_FAV, DELETE_FAV, FILTER, ORDER } from "./types"
 
 export function addFav(id){
     return{
@@ -14,6 +14,20 @@ export function deleteFav(id){
     }
 }
 
+
+export function filterCards(gender){
+    return{
+        type: FILTER,
+        payload: gender
+    }
+}
+
+export function orderCards(order){
+    return{
+        type: ORDER,
+        payload: order
+    }
+}
 
 
 // ACTIONS
