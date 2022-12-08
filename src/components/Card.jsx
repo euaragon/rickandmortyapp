@@ -10,16 +10,16 @@ export function Card(props) {
 
    useEffect(() => {
       props.myFavorites.forEach(fav => {
-         if (fav.detailId === props.detailId) {
+         if (fav.detailId === props.id) {
             setIsFav(true);
          }
       });
-   }, [props.myFavorites, props.detailId]);
+   }, [props.myFavorites, props.id]);
 
    function handleFavorite(){
       if(isFav){
          setIsFav(false)
-         props.deleteFav(props.detailId)
+         props.deleteFav(props.id)
       } else {
          setIsFav(true)
          props.addFav(props)
@@ -32,7 +32,11 @@ export function Card(props) {
          {isFav ? (<button className="sin" onClick={handleFavorite}>🧡</button>) 
          : (<button className="sin" onClick={handleFavorite}>🤍</button>)
          }  
-         <button onClick={props.onClose} className="cerrar"> X</button>
+
+
+         <button onClick={() => props.onClose(props.id)} className="cerrar"> X</button>
+
+
         <Link to={`/detail/${props.detailId}`}>
             <h1>{props.name}</h1>
        </Link>

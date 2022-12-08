@@ -2,19 +2,22 @@ import { connect } from "react-redux";
 import Card from "./Card";
 
  function Favorites({myFavorites}) {
+
+  const {onClose} = myFavorites;
   return (
     <div>
 
 
       {myFavorites.map((c, i) => (
         <Card
-          id={c.detailId}
+          id={c.id}
           key={i}
           name={c.name}
           species={c.species}
           gender={c.gender}
           image={c.image}
           status={c.status}
+          onClose={onClose}
         />
       ))}
     </div>

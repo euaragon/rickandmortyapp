@@ -8,14 +8,14 @@ return(
  <div>
    {characters.map((c) => (
     <Card
-       detailId={c.id}
+       id={c.id}
        name={c.name}
        species={c.species}
        gender={c.gender}
        image={c.image}
        key={c.id}
        status={c.status}
-       onClose={() => onClose(c.id)}
+       onClose={onClose}
      />
   ))}
  </div>

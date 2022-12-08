@@ -12,7 +12,7 @@ const initialState = {
             }
         
         case DELETE_FAV:
-            const filtered = state.myFavorites.filter((p) => p.detailId !== payload) // para eliminar un elemento, se arma un nuevo arreglo filtrando el elemento que se pasa por el payload, generando un nuevo arreglo con todos los elementos menos el del payload
+            const filtered = state.myFavorites.filter((p) => p.id !== payload) // para eliminar un elemento, se arma un nuevo arreglo filtrando el elemento que se pasa por el payload, generando un nuevo arreglo con todos los elementos menos el del payload
                 return{
                     ...state,
                     myFavorites: filtered //igualamos el arreglo original por el nuevo filtrado

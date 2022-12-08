@@ -31,10 +31,10 @@ export default function Detail() {
            
             <h1>NOMBRE: {character.name}</h1>
             <img src={character.image} alt={character.name}/>
-            <h2>STATUS: {character.status}</h2>
-            <h2>SPECIE: {character.species}</h2>
-            <h2>GENDER: {character.gender}</h2>
-            <h2>ORIGIN: {character.origin?.name}</h2>
+            <h2>ESTADO: {character.status}</h2>
+            <h2>ESPECIE: {character.species}</h2>
+            <h2>GENERO: {character.gender}</h2>
+            <h2>ORIGEN: {character.origin?.name}</h2>
             <br/>
             <button className="volver" onClick={() => navigate("/cards")}>Volver</button>
         </div>
