@@ -78,3 +78,8 @@ display: inline-block;
 .masabajo3 form{margin-top: 50px;}
 
 .danger{color: red; font-weight: bold;}
+
+.img_inicio{
+  width: 200px;
+  margin-top: 40px;
+}

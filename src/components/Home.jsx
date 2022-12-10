@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 //import { useNavigate } from "react-router";
+import Rick from "../components/rickymorty.png"
 const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
 export const validate = (usuario) => {
@@ -44,9 +45,9 @@ const Home = (props) => {
     <>
       <div className="masabajo2">
         <h1>THE RICK AND MORTY APP</h1>
-
+        <img className="img_inicio" src={Rick}  alt="rick and morty" />
         <br />
-        <div className="masabajo3">
+        <div>
         <h2>Logueate para entrar</h2>
         
         <form onSubmit={handleSubmit}>
