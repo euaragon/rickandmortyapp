@@ -29,6 +29,7 @@ function handleSelectOrder(e){
         <option value="Descendente" >Descendente</option>
       </select> 
       <select onChange={handleSelectFilter} name="filter">
+      <option value="All" >All</option>
         <option value="Male" selected>Male</option>
         <option value="Female" >Female</option>
         <option value="Genderless" >Genderless</option>

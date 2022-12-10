@@ -24,7 +24,7 @@ const initialState = {
             const filter = state.allCharacters.filter(p => p.gender === payload)
             return{
                 ...state,
-                myFavorites: filter
+                myFavorites: payload === 'All' ? state.allCharacters : filter
             }
 
             case ORDER:
