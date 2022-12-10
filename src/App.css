@@ -1,3 +1,5 @@
+
+
 a{
   text-decoration: none;
   margin: 0 10px;
@@ -8,11 +10,17 @@ a:hover{
   color: #98c1d9;
 }
 
+input, select{
+  padding: 7px 10px;
+  border-radius: 100px;
+  margin: 10px 5px;
+  border: solid 0px;
+  background: #c7d9e4;
+}
+
 .App {
-  display: flex;
-  flex-direction: column;
+  display: block;
   align-items: center;
-  justify-content: center;
   color: #98c1d9;
   margin: 0 auto;
   padding: 0 30px;
@@ -48,13 +56,7 @@ a:hover{
   top: 30px;
 }
 
-input{
-  padding: 7px 20px;
-  border-radius: 100px;
-  margin: 10px 5px;
-  border: solid 0px;
-  background: #c7d9e4;
-}
+
 
 .navBar button, form button{
   position: relative;

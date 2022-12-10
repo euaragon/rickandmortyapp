@@ -4,10 +4,10 @@
   margin: 5px;
   width: 200px;
   height: 100%;
-  float: left;
   border-radius: 10px;
   position: relative;
   align-items: center;
+  display: inline-block;
 }
 
 .carta:hover {

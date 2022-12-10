@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 code {
